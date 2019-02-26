@@ -34,3 +34,24 @@ Version: 1
 *******************************************
 ```
 
+## Build parameters
+
+There are 2 parameters that can be used when building the image:
+
+- `STOREPASS`: this is the password to the JKS trust store.
+- `CERTNAME`: this is the filename for the cert to add to the JKS trust store.
+  - When multiple files are present, only the one specified in this build arg will be added to the JKS, although all will be added to the system store.
+
+For example:
+
+To set the trust store password to `my-new-password`
+
+```bash
+docker build --build-arg STOREPASS=my-new-password -t foo .
+```
+
+To add a different cert called `my-new-cert` to the store (it must have been created previously):
+
+```bash
+docker build --build-arg CERTNAME=my-new-cert -t foo .
+```
