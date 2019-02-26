@@ -55,3 +55,9 @@ To add a different cert called `my-new-cert` to the store (it must have been cre
 ```bash
 docker build --build-arg CERTNAME=my-new-cert -t foo .
 ```
+
+## Helper script
+
+I have taken the liberty to create a helper script to generate self-signed certificates out of band.
+It can be found in the root of the project as `./generate-certificate.sh` and usage instructions are
+at the top of the file.
