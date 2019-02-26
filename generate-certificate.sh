@@ -4,7 +4,6 @@
 #   ./generate-certificate.sh $filename $domain
 # Example:
 #   ./generate-certificate.sh ANZ www.anz.com
-#   ./generate-certificate.sh ANZ www.anz.com
 #   ./generate-certificate.sh # will use the default values: gus www.gustavo.momenton
 CERTNAME=${1:-gus}
 DOMAIN=${2:-www.gustavo.momenton}
